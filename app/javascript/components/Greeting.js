@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRandomGreeting } from '../redux/actions';
-import { Link } from 'react-router-dom'
 
 const Greeting = () => {
   const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting.value);
+  console.log(greeting, 'umair')
 
   useEffect(() => {
     dispatch(fetchRandomGreeting());
